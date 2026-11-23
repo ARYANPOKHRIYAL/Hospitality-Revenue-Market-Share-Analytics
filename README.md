@@ -1,5 +1,7 @@
 # AtliQ Hotels | Hospitality Revenue & Market Share Analytics
 
+![project-title-thumbnail]()
+
 An end-to-end **Business Intelligence project built entirely in Microsoft Power BI** to analyze hotel revenue performance, occupancy, realization, RevPAR, customer ratings, and booking-channel trends across AtliQ Hotels.
 
 The project transforms raw CSV datasets into an interactive reporting solution and translates the results into business insights and recommendations.
