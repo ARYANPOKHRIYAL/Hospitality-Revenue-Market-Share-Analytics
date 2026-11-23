@@ -1,6 +1,6 @@
 # Power BI Dashboard
 
-This folder contains the Power BI report file and the report-page screenshots.
+This folder contains the Power BI report file. Report-page screenshots are stored in `screenshots/`.
 
 ## Power BI report
 
@@ -8,7 +8,15 @@ This folder contains the Power BI report file and the report-page screenshots.
 
 Open the PBIX file in **Power BI Desktop** to interact with the report.
 
-## Report screenshots
+## Report pages
+
+| Page | What it shows |
+|---|---|
+| Home Page | Report landing page and navigation |
+| Executive View | Portfolio KPIs, property performance, weekly occupancy and rating trends, city performance, day-type occupancy, and booking-platform mix |
+| KPI View | Booking and capacity KPIs, day-type metrics, room-class analysis, property-category booking split, weekly revenue/rating trends, and cancellation percentage by month and city |
+
+## Screenshots
 
 | Page | Preview |
 |---|---|
@@ -18,5 +26,5 @@ Open the PBIX file in **Power BI Desktop** to interact with the report.
 
 ## Refreshing the report
 
-The report was developed using the CSV source files in the project. If Power BI cannot locate the source files on another machine, open **Transform data → Data source settings** or review the source steps in Power Query and point them to the local `data/` folder, then refresh.
+The source CSV files are stored in the repository's `data/` folder. The PBIX may still reference the file locations used when the report was originally created. If Power BI cannot locate a source file, open **Transform data → Data source settings** or inspect the relevant Source step in Power Query, update the path to the corresponding CSV in `data/`, and refresh the report.
 
