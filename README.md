@@ -1,4 +1,4 @@
-# AtliQ Hotels | Hospitality Revenue & Market Share Analytics
+# Hospitality Revenue & Market Share Analytics
 
 **An end-to-end Business Intelligence project built entirely in Microsoft Power BI.**
 
@@ -60,7 +60,6 @@ The project was developed end-to-end in Power BI Desktop:
 4. **DAX analysis** — created measures to evaluate the hospitality KPIs.
 5. **Report development** — built the report pages and interactive visuals in Report View.
 
-> **Implementation note:** This is a Power BI project. SQL was not used as the implementation tool for this solution.
 
 ## Dataset
 
@@ -145,4 +144,8 @@ The following are the key results from the project analysis:
 
 ## Project Credits
 
-Developed by **Aryan Pokhriyal** as part of **Codebasics Resume Project Challenge 1 — Hospitality Domain: Provide Insights to the Revenue Team**.
+Developed by **[Aryan Pokhriyal](https://www.linkedin.com/in/aryanpokhriyal/)** as part of **Codebasics Resume Project Challenge 1 — Hospitality Domain: Provide Insights to the Revenue Team**.
+
+**LinkedIn Post: [Click here ↗](https://lnkd.in/p/geaw-2Mj)**
+
+**Presentation Video: [Watch on YouTube ↗](https://youtu.be/8yAW8uQmNX4?si=Yg0UsqXlhB_ofcSq)**
