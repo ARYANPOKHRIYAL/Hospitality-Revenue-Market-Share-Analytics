@@ -82,10 +82,10 @@ See [Data & Source Files](data/README.md) for more information and [Project Docu
 The report landing page provides navigation into the analysis.
 
 ### Executive View
-Provides a portfolio-level overview of revenue, RevPAR, occupancy, DSRN, ADR, realization, and supporting performance breakdowns.
+Presents the portfolio-level KPI summary, including revenue, RevPAR, occupancy, DSRN, ADR, and realization. Supporting visuals include property-level performance, weekly occupancy and average-rating trends, revenue by city/hotel, occupancy by day type, average ratings by city, and booking-platform mix.
 
 ### KPI View
-Presents booking and capacity indicators alongside analysis by day type, room class, booking category, weekly trend, and monthly cancellation percentage.
+Presents revenue, total bookings, successful bookings, and total capacity. Supporting visuals analyze RevPAR, occupancy, ADR, and realization by day type; bookings by room class; revenue by room class; successful bookings by property category (Luxury and Business); weekly revenue and average-rating trends; and cancellation percentage by month and city.
 
 Explore the [dashboard files and screenshots](dashboard/README.md).
 
@@ -141,9 +141,8 @@ The following are the key results from the project analysis:
 3. Explore the Home Page, Executive View, and KPI View.
 4. Refer to the CSVs in `data/` and supporting material in `documentation/`.
 
-**Note:** If the report's source files are not found at their original paths on your machine, update the file paths in Power Query before refreshing the report.
+**Data-source note:** The PBIX may retain the CSV file locations used when the report was originally created. Since the source files are now stored in `data/` and the PBIX is stored in `dashboard/`, check the source steps in Power Query and update the paths to the corresponding files in `data/` if Power BI cannot locate them when refreshing.
 
 ## Project Credits
 
 Developed by **Aryan Pokhriyal** as part of **Codebasics Resume Project Challenge 1 — Hospitality Domain: Provide Insights to the Revenue Team**.
-
