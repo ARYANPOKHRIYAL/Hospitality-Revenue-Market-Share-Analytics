@@ -1,235 +1,149 @@
 # AtliQ Hotels | Hospitality Revenue & Market Share Analytics
 
-![project-title-thumbnail](RPC1-OfficialThumbnail.png)
+**An end-to-end Business Intelligence project built entirely in Microsoft Power BI.**
 
-An end-to-end **Business Intelligence project built entirely in Microsoft Power BI** to analyze hotel revenue performance, occupancy, realization, RevPAR, customer ratings, and booking-channel trends across AtliQ Hotels.
+This project explores hotel revenue performance, occupancy, realization, RevPAR, customer ratings, and booking-channel trends across AtliQ Hotels. It turns three months of booking data into an interactive Power BI report and actionable business recommendations.
 
-The project transforms raw CSV datasets into an interactive reporting solution and translates the results into business insights and recommendations.
+![Project thumbnail](assets/project-thumbnail.png)
 
 ---
 
 ## Dashboard Preview
 
-### Home Page
-![Power BI dashboard home page](Home-Page.png)
-
-### Executive View
-![Executive dashboard](Executive-View.png)
+| Home Page | Executive View |
+|---|---|
+| ![Dashboard home page](dashboard/screenshots/home-page.png) | ![Executive dashboard](dashboard/screenshots/executive-view.png) |
 
 ### KPI View
-![KPI dashboard](KPI-View.png)
+
+![KPI dashboard](dashboard/screenshots/kpi-view.png)
 
 ### Data Model
-![Power BI data model](Data-Model.png)
+
+![Power BI data model](documentation/data-model.png)
 
 ---
 
-## Business Context
+## Project at a Glance
 
-AtliQ Hotels operates a portfolio of properties across major Indian cities, including Mumbai, Bangalore, Hyderabad, and Delhi. The business needed a clearer view of property-level and market-level performance to identify underperforming areas and opportunities to improve revenue and market position.
-
-This analysis uses three months of booking data covering **May, June, and July 2022**.
+| Area | Details |
+|---|---|
+| Business domain | Hospitality |
+| Business | AtliQ Hotels |
+| Project type | Business Intelligence & Revenue Analytics |
+| BI platform | Microsoft Power BI Desktop |
+| Data preparation | Power Query Editor |
+| Data modelling | Power BI Model View |
+| Calculations | DAX |
+| Reporting | Power BI Report View |
+| Data sources | 5 CSV files |
+| Analysis period | May–July 2022 |
+| Markets | Mumbai, Bangalore, Hyderabad, Delhi |
 
 ## Business Problem
 
-The analysis was designed to help answer the following questions:
+AtliQ Hotels needed to understand where its business was underperforming and what actions could improve revenue performance and market position.
 
-- Which properties and cities contribute most to revenue?
-- How do revenue, occupancy, realization, RevPAR, and ratings vary over time?
-- Which hotels are underperforming?
-- How do booking platforms contribute to revenue?
-- Where should management focus its performance-improvement efforts?
+The analysis focuses on identifying performance gaps, understanding revenue and occupancy trends, evaluating property performance, and finding opportunities to strengthen the hotel portfolio.
 
 ## Business Objective
 
-Analyze revenue, occupancy, realization, RevPAR, and customer ratings across properties, cities, booking platforms, and time periods; identify performance gaps; and provide data-driven recommendations to support revenue optimization and market-share improvement.
+Analyze revenue, occupancy, realization, RevPAR, and customer ratings across properties, cities, booking platforms, and time periods; identify performance gaps; and provide data-driven insights to support revenue optimization and market-share improvement.
 
----
+## Tools & Development Workflow
 
-## Tools & Technologies
+The project was developed end-to-end in Power BI Desktop:
 
-| Area | Tool / Component |
+1. **Data ingestion** — imported the source CSV files into Power BI.
+2. **Data extraction and transformation** — prepared the source tables in Power Query Editor.
+3. **Data modelling** — organized the dimension and fact tables and established model relationships in Model View.
+4. **DAX analysis** — created measures to evaluate the hospitality KPIs.
+5. **Report development** — built the report pages and interactive visuals in Report View.
+
+> **Implementation note:** This is a Power BI project. SQL was not used as the implementation tool for this solution.
+
+## Dataset
+
+The repository contains five source tables:
+
+| Table | Purpose |
 |---|---|
-| BI and report development | Microsoft Power BI Desktop |
-| Data ingestion | Power BI Desktop |
-| Data extraction and transformation | Power Query Editor |
-| Data modelling | Power BI Model View |
-| Business calculations | DAX measures |
-| Reporting and visualization | Power BI Report View |
-| Source data | CSV files |
+| `dim_date` | Date, month, week number, and day type |
+| `dim_hotels` | Property name, category, and city |
+| `dim_rooms` | Room category and room class |
+| `fact_aggregated_bookings` | Successful bookings and room capacity by property, date, and room category |
+| `fact_bookings` | Booking details, platform, status, ratings, and generated/realized revenue |
 
----
-
-## Data Sources
-
-The project contains five CSV tables:
-
-| Table | Description | Key fields |
-|---|---|---|
-| `dim_date` | Calendar and reporting attributes | date, month, week number, day type |
-| `dim_hotels` | Hotel/property information | property ID, property name, category, city |
-| `dim_rooms` | Room category lookup | room ID, room class |
-| `fact_aggregated_bookings` | Daily room bookings and capacity by property and room category | property ID, check-in date, room category, successful bookings, capacity |
-| `fact_bookings` | Booking-level and revenue information | booking ID, property ID, booking/check-in/check-out dates, guests, booking platform, rating, status, generated revenue, realized revenue |
-
-### Supporting reference files
-
-- `meta_data_hospitality.txt` — source-column descriptions and metadata.
-- `metrics list.xlsx` — metrics and measures reference.
-- `mock up dashboard_atliq grands.png` — dashboard mock-up/reference.
-
-### Business dimensions
-
-- **Geography:** Mumbai, Bangalore, Hyderabad, Delhi
-- **Property portfolio:** AtliQ Bay, AtliQ Blu, AtliQ City, AtliQ Exotica, AtliQ Grands, AtliQ Palace, AtliQ Seasons
-- **Property category:** Luxury, Business
-- **Room categories:** RT1, RT2, RT3, RT4
-- **Room classes:** Standard, Elite, Premium, Presidential
-
----
-
-## Power BI Development Workflow
-
-The solution was developed in Power BI Desktop through the following stages:
-
-### 1. Data Ingestion
-
-Imported the five CSV datasets into Power BI Desktop as the source for the analysis.
-
-### 2. Data Extraction & Transformation
-
-Used Power Query Editor to prepare the source tables for reporting. This stage covers the data extraction and transformation work performed within the Power BI workflow.
-
-### 3. Data Modelling
-
-Worked in Model View to organize the tables and establish the data model used by the report. The model includes date, hotel, and room dimensions alongside booking and aggregated-booking fact tables.
-
-![Power BI data model](Data-Model.png)
-
-### 4. DAX & KPI Analysis
-
-Used DAX measures to support the hospitality metrics and business analysis, including revenue, occupancy, realization, RevPAR, and ratings.
-
-The `metrics list.xlsx` file is included as the project metrics reference.
-
-### 5. Report Development
-
-Built report pages in Power BI Report View to present the business performance and KPI analysis.
-
----
+See [Data & Source Files](data/README.md) for more information and [Project Documentation](documentation/README.md) for the data dictionary and reference materials.
 
 ## Dashboard Pages
 
+### Home Page
+The report landing page provides navigation into the analysis.
+
 ### Executive View
-
-Provides a business-level view of hotel performance, helping users explore revenue and performance across the portfolio.
-
-![Executive View](Executive-View.png)
+Provides a portfolio-level overview of revenue, RevPAR, occupancy, DSRN, ADR, realization, and supporting performance breakdowns.
 
 ### KPI View
+Presents booking and capacity indicators alongside analysis by day type, room class, booking category, weekly trend, and monthly cancellation percentage.
 
-Presents the key hospitality performance indicators used in the analysis.
-
-![KPI View](KPI-View.png)
-
----
+Explore the [dashboard files and screenshots](dashboard/README.md).
 
 ## Key Findings
 
-The following results are from the project analysis:
+The following are the key results from the project analysis:
 
 ### Property performance
-
-- **AtliQ Exotica** generated the highest revenue at **$320M** and recorded the highest RevPAR at **7.82K**.
-- **AtliQ Seasons** recorded the lowest revenue at **$70M**.
-- **AtliQ Blu** achieved the highest occupancy at **62.02%**.
-- AtliQ Exotica recorded the highest realization rate at **71.18%**, while AtliQ Grands had the lowest at **69.94%**.
+- **AtliQ Exotica** generated the highest property revenue (**$320M**) and recorded the highest RevPAR (**7.82K**).
+- **AtliQ Seasons** recorded the lowest revenue (**$70M**).
+- **AtliQ Blu** achieved the highest occupancy (**62.02%**).
+- AtliQ Exotica recorded the highest realization rate (**71.18%**), while AtliQ Grands had the lowest (**69.94%**).
 
 ### Booking-platform performance
-
-- **MakeYourTrip** generated the highest booking-platform revenue at **$340M**.
+- **MakeYourTrip** generated the highest booking-platform revenue (**$340M**).
 
 ### Geographical performance
-
-- **Mumbai** recorded the highest revenue at **$670M**, followed by Bangalore, Hyderabad, and Delhi.
+- **Mumbai** recorded the highest city revenue (**$670M**), followed by Bangalore, Hyderabad, and Delhi.
 
 ### Weekly trends
-
 - **Week 29** recorded the highest weekly revenue at approximately **$139.73M**.
-- **Week 23** recorded the highest average rating at **3.66**.
-
----
+- **Week 23** recorded the highest average rating (**3.66**).
 
 ## Business Insights
 
-1. **Property performance differs across the portfolio.** AtliQ Exotica leads in revenue and RevPAR, while AtliQ Seasons records the lowest revenue. Improvement plans should account for individual property performance rather than applying a uniform approach.
-
-2. **Occupancy leadership does not automatically mean revenue leadership.** AtliQ Blu leads occupancy, whereas AtliQ Exotica leads revenue and RevPAR. Occupancy should therefore be interpreted alongside revenue and realization measures.
-
-3. **Mumbai is the strongest revenue market in the analysis.** Its performance can be examined to understand which practices may be relevant to other cities.
-
-4. **Realization varies by property.** The difference between the highest and lowest realization rates indicates an opportunity to investigate pricing, booking mix, discounts, cancellations, and related factors.
-
----
+1. **Property performance differs across the portfolio.** AtliQ Exotica leads in revenue and RevPAR, while AtliQ Seasons records the lowest revenue. Improvement plans should be tailored to individual properties.
+2. **Occupancy and revenue leadership are not concentrated in the same property.** AtliQ Blu leads occupancy, whereas AtliQ Exotica leads revenue and RevPAR. Occupancy should be reviewed alongside realization and revenue metrics.
+3. **Mumbai is the strongest revenue market in the analysis.** Its performance offers a useful starting point for investigating practices that may be relevant to other cities.
+4. **Realization varies by property.** The gap between the highest and lowest realization rates warrants further investigation into pricing, booking mix, discounts, and cancellations.
 
 ## Business Recommendations
 
-1. **Develop a turnaround plan for AtliQ Seasons** to investigate its comparatively low revenue and identify property-specific improvement opportunities.
-2. **Study the stronger-performing properties.** Examine the practices associated with AtliQ Exotica's revenue and RevPAR performance and AtliQ Blu's occupancy performance.
-3. **Prioritize opportunities in weaker city markets** and use Mumbai as a performance benchmark for further investigation.
-4. **Introduce weekly performance monitoring** for revenue, occupancy, realization, and customer ratings.
-5. **Review booking-channel performance**, including the contribution of MakeYourTrip, to inform channel strategy.
+1. Develop a property-level turnaround plan for **AtliQ Seasons**.
+2. Study the performance drivers behind **AtliQ Exotica's** revenue and RevPAR and **AtliQ Blu's** occupancy.
+3. Prioritize growth opportunities in weaker city markets, using Mumbai as a benchmark for further investigation.
+4. Introduce weekly monitoring of revenue, occupancy, realization, and customer ratings.
+5. Review booking-channel contribution and optimize the channel strategy, including the role of **MakeYourTrip**.
 
----
+## Repository Guide
 
-## Repository Structure
+| Folder / File | Contents |
+|---|---|
+| [`data/`](data/README.md) | Five raw CSV source tables |
+| [`dashboard/`](dashboard/README.md) | Power BI report and page screenshots |
+| [`documentation/`](documentation/README.md) | Data dictionary, data model, metrics reference, and dashboard mock-up |
+| [`assets/`](assets/) | Project thumbnail and visual assets |
+| `README.md` | Project overview and navigation |
 
-```text
-Hospitality-Revenue-Market-Share-Analytics/
-│
-├── README.md
-├── Resume-Challenge-1.pbix
-│
-├── dim_date.csv
-├── dim_hotels.csv
-├── dim_rooms.csv
-├── fact_aggregated_bookings.csv
-├── fact_bookings.csv
-│
-├── meta_data_hospitality.txt
-├── metrics list.xlsx
-├── mock up dashboard_atliq grands.png
-│
-├── Home-Page.png
-├── Executive-View.png
-├── KPI-View.png
-└── Data-Model.png
-```
-
----
-
-## How to Explore the Project
+## How to Explore
 
 1. Clone or download this repository.
-2. Open `Resume-Challenge-1.pbix` in Power BI Desktop.
-3. Review the report pages and interact with the available report visuals and filters.
-4. Refer to the CSV files and metadata for the source data structure.
-5. Refer to the metrics workbook for the metrics and measures reference.
+2. Open `dashboard/AtliQ-Hotels-Revenue-Analytics.pbix` in Power BI Desktop.
+3. Explore the Home Page, Executive View, and KPI View.
+4. Refer to the CSVs in `data/` and supporting material in `documentation/`.
 
-**Note:** The PBIX report is the primary interactive project artifact. Power BI Desktop is required to explore and interact with the report locally.
-
----
+**Note:** If the report's source files are not found at their original paths on your machine, update the file paths in Power Query before refreshing the report.
 
 ## Project Credits
 
-This project was developed as part of **Codebasics Resume Project Challenge 1 — Hospitality Domain: Provide Insights to the Revenue Team**.
+Developed by **Aryan Pokhriyal** as part of **Codebasics Resume Project Challenge 1 — Hospitality Domain: Provide Insights to the Revenue Team**.
 
-**Developed by: Aryan Pokhriyal**
-
-**LinkedIn Post: [Click here ↗](https://lnkd.in/p/geaw-2Mj)**
-
-**Presentation Video: [Check it out on YouTube ↗ ](https://youtu.be/8yAW8uQmNX4?si=Yg0UsqXlhB_ofcSq)**
-
----
-
-🙏🏻 If you find this project useful, feel free to explore the repository and share your feedback.
