@@ -58,8 +58,6 @@ Analyze revenue, occupancy, realization, RevPAR, and customer ratings across pro
 | Reporting and visualization | Power BI Report View |
 | Source data | CSV files |
 
-> **Project scope:** This is a Power BI project. Data ingestion, extraction, transformation, modelling, calculations, and report development were performed in Power BI. SQL was not used as the project implementation tool.
-
 ---
 
 ## Data Sources
@@ -228,6 +226,10 @@ This project was developed as part of **Codebasics Resume Project Challenge 1 �
 
 **Developed by: Aryan Pokhriyal**
 
+**LinkedIn Post: [Click here ↗](https://lnkd.in/p/geaw-2Mj)**
+
+**Presentation Video: [Check it out on YouTube ↗ ](https://youtu.be/8yAW8uQmNX4?si=Yg0UsqXlhB_ofcSq)**
+
 ---
 
-If you find this project useful, feel free to explore the repository and share your feedback.
+🙏🏻 If you find this project useful, feel free to explore the repository and share your feedback.
